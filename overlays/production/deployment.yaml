@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: the-deployment
+spec:
+  replicas: 5
+  template:
+    spec:
+      containers:
+        - name: the-container
+          env:
+            - name: MY_NEW_VAR
+              value: Value defined by Kustomize for production overlay
